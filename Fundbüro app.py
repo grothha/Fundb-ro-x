@@ -3,6 +3,12 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 import os   # 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model", "keras_model.h5")
+
+@st.cache_resource
+def load_model():
+    return tf.keras.models.load_model(MODEL_PATH, compile=False)
 # DEBUG AUSGABE 👇 HIER EINFÜGEN
 st.write("Aktuelles Verzeichnis:", os.getcwd())
 st.write("Dateien im Hauptordner:", os.listdir())
