@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 import tensorflow as tf
-
+import os   # 
 # DEBUG AUSGABE 👇 HIER EINFÜGEN
 st.write("Aktuelles Verzeichnis:", os.getcwd())
 st.write("Dateien im Hauptordner:", os.listdir())
